@@ -1,0 +1,54 @@
+[
+    {
+    "FirstName":"Ashish",
+    "LastName":"Hansbhavi",
+    "Age":"24",
+    "Hobbies":["Artwork","Football"],
+    "Friends": [{
+                "FirstName":"Paul",
+                "Lastname":"Walker"
+               },
+               {
+                "FirstName":"Messi",
+                "Lastname":"leo"
+               },
+               {
+                "FirstName":"Cris",
+                "Lastname":"ronald"  
+               }],
+    "Academics":[{
+                  "Secondary_Education":"Karnataka State Board, Hubballi",
+                  "Diploma":"KLE Munavalli Polytechnic, Hubballi",
+                  "Degree":"Smt.Kamala & Shri Venkappa M Agadi College, Lakshmeshwara, Gadag-580029",
+                  "CollegeId":"2ka19ee400",
+                  "Branch":"Electrical & Electronics Engeneering"
+                }],
+    "Skills":["JAVA", "JAVASCRIPT","C++","PYTHON"]            
+},
+{
+    "FirstName":"Ananth",
+    "LastName":"Gowda",
+    "Age":"24",
+    "Hobbies":["Music","Football"],
+    "Friends": [{
+                "FirstName":"Dheeraj",
+                "Lastname":"Gangu"
+               },
+               {
+                "FirstName":"Chris",
+                "Lastname":"Patt"
+               },
+               {
+                "FirstName":"Peaky",
+                "Lastname":"Blinders"  
+               }],
+    "Academics":[{
+                  "Secondary_Education":"Karnataka State Board, Hubballi",
+                  "Diploma":"Governament Polytechnic, Hubballi",
+                  "Degree":"Bomaraddi.V.B College of Engineering, Vidyanagr, Hubballi-580023",
+                  "CollegeId":"2ka19ee401",
+                  "Branch":"Electrical & Electronics Engeneering"
+                }],
+    "Skills":[".net", "JAVASCRIPT","C++","PYTHON"]           
+}
+]

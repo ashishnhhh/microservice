@@ -1,43 +1,25 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+const PORT = process.env.PORT || 4545;
 
-const bodyParser = require("body-parser");
-const { throws } = require("assert");
-const { error } = require("console");
-mongoose.set('strictQuery', true);
+const connectDB = require("./dataConnect/MongoConnect");
+const users_routes = require("./route/user");
 
-mongoose.connect("mongodb://localhost:27017/microservice-api" , () => {
-    console.log("mongoCompass connected");
+app.get("/", (req,res) =>{
+    res.send("server is online")
 });
 
-require("./model/product")
-const products = mongoose.model("products")
+app.use("/users", users_routes );
 
-app.use(bodyParser.json());
-
-app.post("/product",(req,res) => {
-    var newProd = {
-        name: 'Iphone',
-        discription: 'this is an apple product',
-        price: '25k'
+const start = async () => {
+    try{
+        await connectDB(process.env.MONGO_URI);
+        app.listen(PORT, () => {
+            console.log(`server is online in the Port ${PORT}`);
+        });
+    }catch(error){
+        console.log(error);
+    }
     }
 
-    var pro = new Pro(newProd);
-    pro.save().then(() => {
-        console.log("new product is created");
-    }).catch((err) => {
-        if(err){
-            throw err;
-        }
-    })
-    res.send("products has been created successfully")
-})
-
-app.get('/', (req,res) =>{
-    res.send("this is an simple microservice project")
-});
-
-app.listen(4545, () => {
-    console.log("this server is live on port : 4545");
-})
+start();
